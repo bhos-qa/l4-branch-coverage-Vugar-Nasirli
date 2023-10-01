@@ -2,6 +2,8 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
+import java.io.IOException;
 
 public class Classroom {
     private List<Student> students = new ArrayList<>();
