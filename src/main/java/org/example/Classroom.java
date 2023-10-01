@@ -45,6 +45,14 @@ public class Classroom {
 
     // Method 6: Check if the classroom is empty
     public boolean isClassroomEmpty() {
+        File tempDir;
+        try {
+            tempDir = File.createTempFile("GPA_results.txt", null);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        tempDir.delete();
+        tempDir.mkdir();
         return students.isEmpty();
     }
 
